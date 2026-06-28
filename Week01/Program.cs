@@ -1,93 +1,37 @@
-﻿#define TRIAL_VERSION
+﻿using Week01.Day02;
+using Week01.Day03;
 
-using SchoolManagement;
+Console.WriteLine("=== Week 1: C# Language & Object Foundations ===");
+Console.WriteLine();
 
-Console.WriteLine("=== Task 1.5 ===");
+Console.WriteLine("1. Day 2 - Namespaces, Identifiers, Preprocessor");
+Console.WriteLine("2. Day 3 - Memory Model, Enums, Nullable, Conversion");
+Console.WriteLine("3. Day 4 - Modern Syntax + Class Anatomy");
+Console.WriteLine("4. Day 5 - Records, Indexers, Mini Projects");
 
-// Using directive
-Student student1 = new Student
+Console.Write("\nEnter your choice: ");
+
+string? choice = Console.ReadLine();
+
+switch (choice)
 {
-    Name = "Alice",
-    Age = 20
-};
+    case "1":
+        Day02Runner.Run();
+        break;
 
-student1.DisplayInfo();
+    case "2":
+        Day03Runner.Run();
+        break;
 
-// Fully qualified name
-SchoolManagement.Student student2 =
-    new SchoolManagement.Student
-    {
-        Name = "Bob",
-        Age = 22
-    };
+    case "3":
+        Console.WriteLine("Day 4 not implemented yet.");
+        break;
 
-student2.DisplayInfo();
+    case "4":
+        Console.WriteLine("Day 5 not implemented yet.");
+        break;
 
-/*
-using SchoolManagement allows us to use Student directly.
-
-Without using, we must write SchoolManagement.Student.
-*/
-
-
-Console.WriteLine("\n=== Task 1.6 ===");
-
-// No using ModuleA or ModuleB because Helper exists in both namespaces
-
-ModuleA.Helper.Greet();
-ModuleB.Helper.Greet();
-
-/*
-If we wrote:
-
-using ModuleA;
-using ModuleB;
-
-Helper.Greet();
-
-the compiler would not know which Helper class to use.
-*/
-
-
-Console.WriteLine("\n=== Task 1.7 ===");
-
-// camelCase local variables
-
-int studentAge = 20;
-string firstName = "Alice";
-
-void PrintStudentInfo()
-{
-    Console.WriteLine($"{firstName}, Age: {studentAge}");
+    default:
+        Console.WriteLine("Invalid choice.");
+        break;
 }
-
-// PascalCase method name
-
-PrintStudentInfo();
-
-// int class = 5; // Compile error because class is a keyword
-
-int @class = 5;
-
-Console.WriteLine($"Class number: {@class}");
-
-/*
-@class works because @ tells the compiler
-to treat class as an identifier instead of a keyword.
-
-In real applications, prefer classNumber.
-*/
-
-
-Console.WriteLine("\n=== Task 1.8 ===");
-
-#if TRIAL_VERSION
-Console.WriteLine("You are using the TRIAL version.");
-#else
-Console.WriteLine("You are using the FULL version.");
-#endif
-
-
-Employee employee = new Employee("Ravi", 30);
-
-employee.Display();
