@@ -1,13 +1,13 @@
-﻿public class Employee
+﻿namespace Week01.Day02;
+
+public class Employee
 {
     #region Fields
 
     private string _name;
-
     private int _age;
 
     #endregion
-
 
     #region Properties
 
@@ -25,7 +25,6 @@
 
     #endregion
 
-
     #region Constructors
 
     public Employee(string name, int age)
@@ -35,7 +34,6 @@
     }
 
     #endregion
-
 
     #region Methods
 
