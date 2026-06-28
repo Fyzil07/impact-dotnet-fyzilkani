@@ -1,1 +1,1 @@
-# impact-dotnet-fyzilkani
+Week 1 started - Toolchain setup complete.
