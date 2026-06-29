@@ -1,5 +1,6 @@
 ﻿using Week01.Day02;
 using Week01.Day03;
+using Week01.Day04;
 
 Console.WriteLine("=== Week 1: C# Language & Object Foundations ===");
 Console.WriteLine();
@@ -24,7 +25,7 @@ switch (choice)
         break;
 
     case "3":
-        Console.WriteLine("Day 4 not implemented yet.");
+        Day04Runner.Run();
         break;
 
     case "4":
