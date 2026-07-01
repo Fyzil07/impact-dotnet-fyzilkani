@@ -1,14 +1,18 @@
 ﻿using Week01.Day02;
 using Week01.Day03;
 using Week01.Day04;
+using Week01.Day05;
+using Week01.MiniProjects.ProductCatalog;
+using Week01.MiniProjects.TemperatureConverter;
+using Week01.MiniProjects.ContactCard;
 
-Console.WriteLine("=== Week 1: C# Language & Object Foundations ===");
-Console.WriteLine();
-
-Console.WriteLine("1. Day 2 - Namespaces, Identifiers, Preprocessor");
-Console.WriteLine("2. Day 3 - Memory Model, Enums, Nullable, Conversion");
-Console.WriteLine("3. Day 4 - Modern Syntax + Class Anatomy");
-Console.WriteLine("4. Day 5 - Records, Indexers, Mini Projects");
+Console.WriteLine("1. Run Day 2");
+Console.WriteLine("2. Run Day 3");
+Console.WriteLine("3. Run Day 4");
+Console.WriteLine("4. Run Day 5");
+Console.WriteLine("5. Mini Q1 - Product Catalog");
+Console.WriteLine("6. Mini Q2 - Temperature Converter");
+Console.WriteLine("7. Mini Q3 - Contact Card");
 
 Console.Write("\nEnter your choice: ");
 
@@ -29,7 +33,19 @@ switch (choice)
         break;
 
     case "4":
-        Console.WriteLine("Day 5 not implemented yet.");
+        Day05Runner.Run();
+        break;
+
+    case "5":
+        ProductCatalogRunner.Run();
+        break;
+
+    case "6":
+        TemperatureConverterRunner.Run();
+        break;
+
+    case "7":
+        ContactCardRunner.Run();
         break;
 
     default:
