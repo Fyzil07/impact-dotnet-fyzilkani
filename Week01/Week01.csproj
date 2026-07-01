@@ -7,11 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Day05\" />
-    <Folder Include="MiniProjects\ContactCard\" />
-    <Folder Include="MiniProjects\TemperatureConverter\" />
-    <Folder Include="MiniProjects\ProductCatalog\" />
-  </ItemGroup>
-
 </Project>
